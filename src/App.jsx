@@ -1,6 +1,6 @@
 import { Header } from "./assets/components/Header";
 import data from "./data.json";
-import { Albums } from "./assets/components/Albums";
+import { Albums } from "./assets/components/Album";
 import { Cover } from "./assets/components/Cover";
 
 export const App = () => {
@@ -13,7 +13,7 @@ export const App = () => {
       <Albums
         key={albuums.id}
         name={albuums.name}
-        artists={albuums.artists[0].name}
+        artistName={albuums.external_urls.spotify}
       />
     ));
   };
