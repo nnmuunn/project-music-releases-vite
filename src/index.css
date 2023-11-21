@@ -4,7 +4,9 @@
   text-align: center;
   color: white;
 }
-
+body {
+  margin: 25px 50px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -21,4 +23,12 @@ header {
   align-content: center;
   justify-content: space-evenly;
   color: white;
+  margin: 10px;
+  
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
 }

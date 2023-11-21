@@ -1,7 +1,7 @@
-import { Header } from "./assets/components/Header";
+import { Header } from "./components/Header";
 import data from "./data.json";
-import { Albums } from "./assets/components/Album";
-import { Cover } from "./assets/components/Cover";
+import { Albums } from "./components/Album";
+
 
 export const App = () => {
   const alben = data.albums.items;
@@ -12,8 +12,11 @@ export const App = () => {
     return alben.map((albuums) => (
       <Albums
         key={albuums.id}
-        name={albuums.name}
-        artistName={albuums.external_urls.spotify}
+        cover={albuums.images[0].url}
+        artistName={albuums.external_urls.name}
+        artistLink={albuums.artists[0].external_urls.spotify}
+        albumLink={albuums.external_urls.spotify}
+
       />
     ));
   };
@@ -21,11 +24,12 @@ export const App = () => {
 
   return (
     <>
-    <h1>New Albums && Singles // ouon.min</h1>
+
+      <h1>New Albums && Singles // ouon.min</h1>
       <section className="albums">
-      {renderAlbums()}
+        {renderAlbums()}
       </section>
-      
+
     </>
   );
 };
