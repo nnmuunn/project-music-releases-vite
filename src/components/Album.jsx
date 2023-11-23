@@ -1,16 +1,16 @@
 import { Cover } from "./cover/Cover"
-import { ArtistName } from "./Artist/ArtistName"
-import { AlbumLink } from "./Album/AlbumLink"
+// import { ArtistName } from "./Artist/ArtistName"
+// import { AlbumLink } from "./Album/AlbumLink"
 
 export const Albums = ({ cover, artistLink, artistName, albumLink, albumName }) => {
 
   return (
     <div>
       <Cover cover={cover} />
-      <ArtistName artistName={artistName} />
-      <AlbumLink albumLink={albumLink} artistLink={artistLink} artistName={artistName} albumName={albumName} />
-      {/* Child components from this component */}
-
+      <div>
+        <a href={albumLink} target="_blank">{albumName}</a>
+        <a href={artistLink} target="_blank">{artistName}</a>
+      </div>
     </div>
 
   )

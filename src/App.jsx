@@ -8,7 +8,7 @@ export const App = () => {
   console.log(alben[0])
 
   //function map()
-  const renderAlbums = () => {
+  const newData = () => {
     return alben.map((albuums) => (
       <Albums
         key={albuums.id}
@@ -29,7 +29,7 @@ export const App = () => {
 
       <h1>New Albums && Singles // ouon.min</h1>
       <section className="albums">
-        {renderAlbums()}
+        {newData()}
       </section>
 
     </>
