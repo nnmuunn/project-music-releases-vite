@@ -5,7 +5,7 @@ import { Albums } from "./components/Album";
 
 export const App = () => {
   const alben = data.albums.items;
-  console.log(alben)
+  console.log(alben[0])
 
   //function map()
   const renderAlbums = () => {
@@ -13,9 +13,11 @@ export const App = () => {
       <Albums
         key={albuums.id}
         cover={albuums.images[0].url}
-        artistName={albuums.external_urls.name}
+        artistName={albuums.artists[0].name}
+        albumName={albuums.name}
         artistLink={albuums.artists[0].external_urls.spotify}
         albumLink={albuums.external_urls.spotify}
+    
 
       />
     ));

@@ -18,8 +18,7 @@ header {
 
 .albums {
   display: grid;
-  grid-template-rows: 100px 100px 100px 100px;
-  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   align-content: center;
   justify-content: space-evenly;
   color: white;
@@ -28,7 +27,7 @@ header {
 }
 
 img {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   margin: 0;
 }
